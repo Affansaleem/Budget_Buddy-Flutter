@@ -38,8 +38,8 @@ class _TransactionPartState extends State<TransactionPart> {
             fillColor: Colors.grey[200],
           ),
         ),
-        SizedBox(height: 20,),
-        Text(
+        const SizedBox(height: 20,),
+        const Text(
           "Dashboard",
           style: TextStyle(
               color: Colors.black, fontWeight: FontWeight.w900, fontSize: 28),
@@ -68,7 +68,7 @@ class _TransactionPartState extends State<TransactionPart> {
               color: const Color(0xFFCDDEFB),
               borderRadius: BorderRadius.circular(20),
             ),
-            duration: Duration(milliseconds: 400),
+            duration: const Duration(milliseconds: 400),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
@@ -83,13 +83,13 @@ class _TransactionPartState extends State<TransactionPart> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Affan Saleem",
+                        Text("Affan Saleem",
                             style: TextStyle(
                                 fontWeight: FontWeight.w500, fontSize: 16)),
-                        const Text("13/31",
+                        Text("13/31",
                             style: TextStyle(
                                 fontWeight: FontWeight.w500, fontSize: 14)),
                       ],
@@ -107,7 +107,7 @@ class _TransactionPartState extends State<TransactionPart> {
         ),
         Container(
           decoration: BoxDecoration(
-            color: Color(0xFFF1F5FB),
+            color: const Color(0xFFF1F5FB),
             borderRadius: BorderRadius.circular(30),
           ),
           height: 600,
@@ -116,9 +116,9 @@ class _TransactionPartState extends State<TransactionPart> {
             itemCount: entries.length,
             itemBuilder:(BuildContext context, int index) {
               return ListTile(
-                leading: Icon(Icons.call_received),
-                title: Text("${entries[index]}"),
-                subtitle: Text("${dates[index]}"),
+                leading: const Icon(Icons.call_received),
+                title: Text(entries[index]),
+                subtitle: Text(dates[index]),
                 trailing: Text("R\$${amounts[index]}"),
               );
 

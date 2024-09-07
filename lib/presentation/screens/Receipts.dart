@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ReceiptsPart extends StatefulWidget {
@@ -16,7 +13,7 @@ class _ReceiptsPartState extends State<ReceiptsPart> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
-        margin: EdgeInsets.only(bottom: 55),
+        margin: const EdgeInsets.only(bottom: 55),
         padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
         decoration: BoxDecoration(
             color: const Color(0xFFF1F5FB),
@@ -64,9 +61,9 @@ class _ReceiptsPartState extends State<ReceiptsPart> {
                 ],
               ),
             ),
-            Container(
+            const SizedBox(
               height: 250,
-              child: const Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -99,9 +96,9 @@ class _ReceiptsPartState extends State<ReceiptsPart> {
               ),
             ),
             const Divider(),
-            Container(
+            const SizedBox(
               height: 200,
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(

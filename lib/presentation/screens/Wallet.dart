@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -14,7 +13,7 @@ class WalletPart extends StatefulWidget {
 class _WalletPartState extends State<WalletPart> {
   late TooltipBehavior _tooltipBehavior;
   final List<ChartData> chartData = [
-    ChartData('Credit', 25, Color.fromRGBO(128, 128, 128, 1)),
+    ChartData('Credit', 25, const Color.fromRGBO(128, 128, 128, 1)),
     ChartData('Debit', 38, Colors.black),
   ];
   final List<ChartDataSpline> chartDataSpline = [
@@ -40,29 +39,29 @@ class _WalletPartState extends State<WalletPart> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 45, horizontal: 15),
+            padding: const EdgeInsets.symmetric(vertical: 45, horizontal: 15),
             decoration: BoxDecoration(
-              color: Color(0xFfF1F5FB),
+              color: const Color(0xFfF1F5FB),
               borderRadius: BorderRadius.circular(30),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Wallet",
                   style: TextStyle(color: Color(0xFF333E52), fontSize: 19),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Text(
+                const Text(
                   "\$4,523.98",
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 47),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
@@ -75,10 +74,10 @@ class _WalletPartState extends State<WalletPart> {
                           height: 30,
                           width: 30,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text("\$ 3,030.89"),
+                        const Text("\$ 3,030.89"),
                       ],
                     ),
                     Row(
@@ -88,10 +87,10 @@ class _WalletPartState extends State<WalletPart> {
                           height: 30,
                           width: 30,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text("\$ 223.98")
+                        const Text("\$ 223.98")
                       ],
                     ),
                   ],
@@ -100,23 +99,23 @@ class _WalletPartState extends State<WalletPart> {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 25),
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+            margin: const EdgeInsets.symmetric(vertical: 25),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
             decoration: BoxDecoration(
-              color: Color(0xFfF1F5FB),
+              color: const Color(0xFfF1F5FB),
               borderRadius: BorderRadius.circular(30),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Monthly Earnings",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
-                Text(
+                const Text(
                   "Income",
                   style: TextStyle(color: Colors.grey, fontSize: 15),
                 ),
@@ -133,22 +132,22 @@ class _WalletPartState extends State<WalletPart> {
           ),
           Container(
               height: 290,
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
               decoration: BoxDecoration(
-                color: Color(0xFfF1F5FB),
+                color: const Color(0xFfF1F5FB),
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Earnings",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 19,
                         fontWeight: FontWeight.bold),
                   ),
-                  Container(
+                  SizedBox(
                     height: 230,
                     child: Stack(
                       alignment: Alignment.center,
@@ -168,7 +167,7 @@ class _WalletPartState extends State<WalletPart> {
                           ],
                         ),
                         // Centered Text widget
-                        Positioned(
+                        const Positioned(
                           child: Text(
                             '\$ 4,523.98',
                             style: TextStyle(

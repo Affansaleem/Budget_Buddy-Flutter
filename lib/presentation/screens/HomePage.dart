@@ -188,13 +188,13 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           // 1st Column
-          TransactionPart(),
+          const TransactionPart(),
 
           // 2nd Column
-          WalletPart(),
+          const WalletPart(),
 
           // 3rd Column
-          ReceiptsPart(),
+          const ReceiptsPart(),
         ],
       ),
     );

@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 
 TextStyle modernLightTextStyle({
@@ -8,7 +7,7 @@ TextStyle modernLightTextStyle({
   return TextStyle(
     fontSize: fontSize,
     fontWeight: FontWeight.w300, // Light weight
-    color: Color(0xFF4A4A4A),
+    color: const Color(0xFF4A4A4A),
     letterSpacing: 0.5, // Slightly spaced out letters
     fontFamily: 'Roboto', // Modern font family
 
