@@ -3,7 +3,11 @@ import 'package:budgetbuddy/presentation/screens/Receipts.dart';
 import 'package:budgetbuddy/presentation/screens/Transactions.dart';
 import 'package:budgetbuddy/presentation/screens/Wallet.dart';
 import 'package:budgetbuddy/presentation/widgets/Drawer.dart';
+import 'package:cherry_toast/cherry_toast.dart';
+import 'package:cherry_toast/resources/arrays.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,8 +21,22 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _selectedIndex = index;
     });
+    if(_selectedIndex == 7)
+      {
+        signOut();
+      }
   }
-
+  Future<void> signOut() async {
+    final supabase = Supabase.instance.client;
+    await supabase.auth.signOut();
+    Navigator.pushReplacementNamed(context, "/login");
+    CherryToast.info(
+      title: const Text("Logout successfully",
+          style: TextStyle(color: Colors.black)),
+      displayIcon: true,
+      animationType: AnimationType.fromTop,
+    ).show(context);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

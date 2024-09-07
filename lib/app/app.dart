@@ -1,4 +1,6 @@
 import 'package:budgetbuddy/presentation/screens/IntroScreen.dart';
+import 'package:budgetbuddy/presentation/screens/LoginPage.dart';
+import 'package:budgetbuddy/presentation/screens/SignUpPage.dart';
 import 'package:budgetbuddy/presentation/widgets/CustomScroll.dart';
 import 'package:flutter/material.dart';
 
@@ -18,10 +20,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const Introscreen(),
+      home:  HomePage(),
       routes: {
-        '/home': (context) => HomePage(),
-        // '/accounts': (context) => AccountsPage(),
+        '/dashboard': (context) => HomePage(),
+        '/register': (context) => const SignUpPage(),
+        '/login': (context) => const LoginPage(),
         // '/transactions': (context) => TransactionPage(),
       },
     );
